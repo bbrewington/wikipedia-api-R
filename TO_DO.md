@@ -8,3 +8,9 @@
 ## Sustainability
 * [ ] Get a bunch of sustainability data & plot it ([Wikipedia Index of Sustainability Articles](https://en.wikipedia.org/wiki/Index_of_sustainability_articles))
   * Xpath: //*[@id="mw-content-text"]
+
+## Atlanta
+* [ ] Get data on [Neighborhoods in Atlanta](https://en.wikipedia.org/wiki/Neighborhoods_in_Atlanta)
+
+## Music
+* [ ] Grab data on music pages [Index of Music Pages](https://en.wikipedia.org/wiki/Index_of_music_articles)
