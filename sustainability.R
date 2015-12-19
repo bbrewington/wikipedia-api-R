@@ -53,8 +53,12 @@ week.xref <- data.frame(start.date = date.seq,
                               filter(weekday==1) %>% 
                               select(-weekday)
 
+# Plot top N pages, by week
 ggplot(sustainability %>% filter(volume == "top") %>% group_by(week,page) %>% summarise(weekly.views = sum(views)) %>% left_join(week.xref, by="week"),
             aes(start.date, weekly.views)) +
      geom_line(size=1) + facet_wrap(~page) + ylab("Weekly Page Views") + xlab("Month") +
      ggtitle(paste0("Weekly View count of Top ",num.top," Sustainability Articles (2015 Aug - Dec)"))
 
+# Plot all data
+ggplot(sustainability, aes(mydate, views, group=page))+geom_line(alpha=.3) +
+     ylab("Daily Page Views") + xlab("Month") + ggtitle("Daily View Count of Wikipedia Sustainability Articles (2015 Aug-Dec)")
